@@ -15,32 +15,7 @@ reg1.fit(X_train,y_train) #loading the data to the logistic regression model by 
 pred = reg1.predict(X_test)#predicted the X_test and stored in pred variable
 acc1 = accuracy_score(y_test, pred) #checking the accuracy of the model by accuracy_score
 
-'''import pandas as pd
-import numpy as np
 
-# Generate 100 values for each key
-num_values = 300
-strengths = np.random.randint(1, 11, num_values)
-weaknesses = np.random.randint(0, 2, num_values)
-sucess = np.random.randint(0,100,num_values)
-numer = np.random.randint(0,30,num_values)
-Mission = np.random.randint(0, 2, num_values)
-
-powers = ["flying", "superhuman strength", "will power", "Superhuman Reflexes","Teleportation","Super Speed","Shape shifing","Time Travel","Elasticity","Heat Vision"]
-powers_column = np.random.choice(powers, num_values)
-# Create a DataFrame
-data = {
-    "abilities": powers_column,
-    "strengths": strengths,
-    "weaknesses": weaknesses,
-    "sucessrate" : sucess,
-    "missionscompleted" : numer,
-
-    "Mission": Mission
-}
-
-d12 = pd.DataFrame(data)
-print(d12)'''
 
 app = Flask(__name__) #loading the Flask module to app variable
 @app.route('/') #creating a route path
